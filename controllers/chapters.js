@@ -9,7 +9,7 @@ function indexRoute(req, res){
 
 function showRoute(req, res) {
   Chapter
-    .findById(req.params.id)
+    .findById('/activities/:id')
     .then(chapter => {
       if(!chapter) return res.status(404).json({ message: 'no chapter here'})
       return res.status(200).json(chapter)

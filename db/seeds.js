@@ -14,25 +14,21 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
     },
     { chapter: 2,
       choice: 'chapter 2 choice',
-      ctext: 'This is chapter 2 main texty text text',
+      text: 'This is chapter 2 main texty text text',
       choices: [3, 4]
     },
     { chapter: 3,
       choice: 'chapter 2 choice',
-      ctext: 'This is chapter 2 main texty text text',
+      text: 'This is chapter 2 main texty text text',
       choices: [1, 4]
     },
     { chapter: 4,
       choice: 'chapter 2 choice',
-      ctext: 'This is chapter 2 main texty text text',
+      text: 'This is chapter 2 main texty text text',
       choices: [1, 2]
     }
   ])
-    .then(chapters => {
-      console.log(`${chapters.length} chapters created`)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    .then(chapters => console.log(`${chapters.length} chapters created`))
+    .catch(err => console.log(err))
     .finally(() => mongoose.connection.close())
 })

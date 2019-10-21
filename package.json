@@ -6,7 +6,8 @@
   "author": "CPrich905 <charlie.prichard@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "nodemon index.js",
+    "serve:back": "nodemon index.js",
+    "serve:front": "webpack-dev-server --mode-development",
     "seed": "node db/seeds.js",
     "build": "webpack -p",
     "start": "node index.js"
@@ -15,5 +16,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.7.5",
     "mongoose-unique-validator": "^2.0.3"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1"
   }
 }

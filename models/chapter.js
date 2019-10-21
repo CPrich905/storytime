@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const chapterSchema = new mongoose.Schema({
-  chapter: { Number },
-  choice: { String },
-  text: { String },
+  chapter: { type: Number, required: true },
+  choice: { type: String, required: true },
+  text: { type: String, required: true },
   choices: []
 })
 
