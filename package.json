@@ -1,0 +1,19 @@
+{
+  "name": "storytime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:CPrich905/storytime.git",
+  "author": "CPrich905 <charlie.prichard@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "nodemon index.js",
+    "seed": "node db/seeds.js",
+    "build": "webpack -p",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.5",
+    "mongoose-unique-validator": "^2.0.3"
+  }
+}
