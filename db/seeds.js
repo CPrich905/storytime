@@ -3,6 +3,8 @@ const { dbURI } = require('../config/environment')
 const Chapter = require('../models/chapter')
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (err, db) => {
+  if (err) return console.log(err)
+
   db.dropDatabase()
 
   Chapter.create([
@@ -30,5 +32,5 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
   ])
     .then(chapters => console.log(`${chapters.length} chapters created`))
     .catch(err => console.log(err))
-    .finally(() => mongoose.connection.close())
+    // .finally(() => mongoose.connection.close())
 })
