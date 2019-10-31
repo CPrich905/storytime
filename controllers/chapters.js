@@ -1,20 +1,20 @@
 const Chapter = require('../models/chapter')
 
-function indexRoute(req, res){
+function indexRoute(req, res, next){
   Chapter
     .find(req.query)
     .then(chapters => res.status(200).json(chapters))
-    .catch(err => res.json(err))
+    .catch(next)
 }
 
-function showRoute(req, res) {
+function showRoute(req, res, next) {
   Chapter
-    .findById('/activities/:id')
+    .findById(req.params.id)
     .then(chapter => {
       if(!chapter) return res.status(404).json({ message: 'no chapter here'})
       return res.status(200).json(chapter)
     })
-    .catch(err => res.status(404).json(err))
+    .catch(next)
 }
 
 module.exports = {
