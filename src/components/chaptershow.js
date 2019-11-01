@@ -4,14 +4,14 @@ import axios from 'axios'
 class ChapterShow extends Component {
   constructor(props) {
     super(props)
-    this.state = { data: null }
+    this.state = { chapter: null }
   }
 
 
   // sets chapter data to state. This needs to request a specific chapter id.
   getData() {
-    axios.get('/api/chapters')
-      .then((res) => this.setState({ data: res.data }))
+    axios.get(`/api/chapters/${this.props.match.params.id}`)
+      .then((res) => this.setState({ chapter: res.data }))
       .catch(err => console.log(err))
   }
 
@@ -23,12 +23,14 @@ class ChapterShow extends Component {
 
   render() {
     if(!this.state.data) return null
-    console.log(this.state.data)
+    console.log('chaptershow.js render() fires')
+    const { chapter } = this.state
     return (
       <main>
         <div>
           <h1>Chapters</h1>
-
+          <h2>Chapter number is { chapter.chapter }</h2>
+          <p> { chapter.text } </p>
         </div>
       </main>
     )

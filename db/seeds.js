@@ -10,7 +10,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
   Chapter.create([
     {
       chapter: 1,
-      choice: 'this is chapter choice text (shown on previous chapter)',
+      choice: 'this is chapter 1 choice text (shown on previous chapter)',
       text: 'This is chapter 1 main texty text text',
       choices: [2, 3, 4]
     },
@@ -20,13 +20,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
       choices: [3, 4]
     },
     { chapter: 3,
-      choice: 'chapter 2 choice',
-      text: 'This is chapter 2 main texty text text',
+      choice: 'chapter 3 choice',
+      text: 'This is chapter 3 main texty text text',
       choices: [1, 4]
     },
     { chapter: 4,
-      choice: 'chapter 2 choice',
-      text: 'This is chapter 2 main texty text text',
+      choice: 'chapter 4 choice',
+      text: 'This is chapter 4 main texty text text',
       choices: [1, 2]
     }
   ])
