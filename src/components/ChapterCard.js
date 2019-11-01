@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const ChapterCard = ({ chapter, choice, _id }) => {
   return (
     <div>
-      <Link to={`/chapters/${_id}`}>
+      <Link to={`${_id}`}>
         <div className="card">
           <div className="card-header">
             <h4>Chapter {chapter}</h4>

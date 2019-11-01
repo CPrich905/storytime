@@ -4,18 +4,26 @@ import axios from 'axios'
 class ChapterShow extends Component {
   constructor(props) {
     super(props)
-    this.state = { chapter: null }
+    this.state = { chapter: null, choices: [] }
   }
 
 
   // sets chapter data to state. This needs to request a specific chapter id.
   getData() {
+    console.log('getData in ChaperShow fires')
     axios.get(`/api/chapters/${this.props.match.params.id}`)
-      .then((res) => this.setState({ chapter: res.data }))
+      .then((res) => console.log(res.data))
+      // .then((res) => this.setState({ chapter: res.data }))
       .catch(err => console.log(err))
   }
 
+  checkChoices() {
+    //function to check the choices on the current chapter, pushing them to an array of choices in state
+    console.log('check choices fires in ChapterShow')
+  }
+
   componentDidMount() {
+    // console.log('componentDidMount in ChapterShow fires')
     this.getData()
   }
 
@@ -29,8 +37,8 @@ class ChapterShow extends Component {
       <main>
         <div>
           <h1>Chapters</h1>
-          <h2>Chapter number is { chapter.chapter }</h2>
-          <p> { chapter.text } </p>
+          <h2>Chapter number is </h2>
+          <p>Chapter text goes here { chapter.text }</p>
         </div>
       </main>
     )
