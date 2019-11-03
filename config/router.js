@@ -7,4 +7,7 @@ router.route('/chapters')
 router.route('/chapters/:id')
   .get(chapters.show)
 
+router.route('/chapterssearch/:query')
+  .get(chapters.find)
+
 module.exports = router

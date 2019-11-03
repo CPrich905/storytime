@@ -17,7 +17,19 @@ function showRoute(req, res, next) {
     .catch(next)
 }
 
+function findChoice(req, res) {
+  Chapter
+    .findOne( { chapter: req.params.query })
+    .then(chapter => {
+      if (!chapter) throw new Error('Not found')
+      return res.status(200).json(chapter)
+    })
+    .catch(err => console.log(err))
+}
+
+
 module.exports = {
   index: indexRoute,
-  show: showRoute
+  show: showRoute,
+  find: findChoice
 }

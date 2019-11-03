@@ -7,7 +7,7 @@ const chapterSchema = new mongoose.Schema({
   chapter: { type: Number, required: true },
   choice: { type: String, required: true },
   text: { type: String, required: true },
-  choices: []
+  options: []
 })
 
 // chapterSchema.plugin(require('mongoose_unique_validator'))

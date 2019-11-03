@@ -10,29 +10,55 @@ class Home extends React.Component {
   constructor() {
     super()
 
-    this.state = { chapters: null }
+    this.state = { chapters: null, activeChapter: null }
+
+    this.checkChapter = this.checkChapter.bind(this)
   }
 
+
+  // get request to api/chapters. The response is sorted by the 'chapter' field in ascending order, then sets state.
   componentDidMount() {
     axios.get('/api/chapters')
-      .then(res => this.setState({ chapters: res.data }))
+      .then(res => {
+        res.data.sort((a, b) => a.chapter - b.chapter)
+        this.setState({ chapters: res.data })
+        this.checkChapter()
+      })
       .catch(err => console.log(err))
+  }
+
+  // function to check the active chapter. On the home page this is chapter 1. On subsequent chapters this is the array of choices. A function will be needed to map through the choices array on chapter.x, matching choice number to chapter number and printing chapter.choice text to the cards for the reader to choose from.
+  checkChapter() {
+    console.log( 'checkChapter fires')
+
+    const activeChapter = this.state.chapters[0]
+    this.setState({ activeChapter: activeChapter })
+
+    // console.log( 'chapter index of 0 is ', this.state.0 )
+    // if (chapter.chapter is 1) return chapter.
   }
 
 
   // the below currently maps through all chapters.
   // Home page will need only chapter 1. For all subsequent chapters, the choices will need to be mapped through, probably using chapters.choices.map(chapter)
   render() {
-    if(!this.state.chapters) return null
+    if(!this.state.chapters || !this.state.activeChapter) return null
+    console.log('this.state.chapters', this.state.chapters)
+    // console.log('active chapter is', this.state.activeChapter)
+    const { activeChapter } = this.state
+    console.log('active chapter is', activeChapter)
     return (
       <section>
         <div>
-          {this.state.chapters.map(chapter => (
-            <ChapterCard
-              key={chapter._id}
-              {...chapter}
-            />
-          ))}
+          <h1>Welcome to Josh's Tale, a choose your own ending adventure built in React.</h1>
+          <p>Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens certain options and closes others, shaping your journey. Choose wisely!</p>
+        </div>
+
+        <div>
+          <ChapterCard
+            key={activeChapter._id}
+            {...activeChapter}
+          />
         </div>
       </section>
     )
