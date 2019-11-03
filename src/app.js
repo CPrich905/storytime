@@ -18,12 +18,12 @@ class App extends React.Component {
     return (
 
       <BrowserRouter>
-        <main>
-          <Switch>
-            <Route path="/:id" component={ ChapterShow }/>
-            <Route exact path="/" component={ Home }/>
-          </Switch>
-        </main>
+
+        <Switch>
+          <Route path="/:id" component={ ChapterShow }/>
+          <Route exact path="/" component={ Home }/>
+        </Switch>
+
 
       </BrowserRouter>
 
