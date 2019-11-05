@@ -6,7 +6,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 // ChapterShow: This needs  to show title (?and summary of previous chapter?), content, and choices.
 import ChapterShow from './components/ChapterShow'
-// Component: footer
+// import NextChapter from './components/NextChapter'
+// Component: footer w. links to github
 
 // Future development to include a choice of characters (vue version? Score panel as well.)
 
@@ -21,6 +22,7 @@ class App extends React.Component {
 
         <Switch>
           <Route path="/:id" component={ ChapterShow }/>
+          <Route path="/search/:query" component={ ChapterShow }/>
           <Route exact path="/" component={ Home }/>
         </Switch>
 

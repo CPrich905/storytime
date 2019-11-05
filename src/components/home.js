@@ -30,27 +30,23 @@ class Home extends React.Component {
   // function to check the active chapter. On the home page this is chapter 1. On subsequent chapters this is the array of choices. A function will be needed to map through the choices array on chapter.x, matching choice number to chapter number and printing chapter.choice text to the cards for the reader to choose from.
   checkChapter() {
     console.log( 'checkChapter fires')
-
     const activeChapter = this.state.chapters[0]
     this.setState({ activeChapter: activeChapter })
-
-    // console.log( 'chapter index of 0 is ', this.state.0 )
-    // if (chapter.chapter is 1) return chapter.
   }
 
 
   // the below currently maps through all chapters.
   // Home page will need only chapter 1. For all subsequent chapters, the choices will need to be mapped through, probably using chapters.choices.map(chapter)
   render() {
+    console.log('home render fires')
     if(!this.state.chapters || !this.state.activeChapter) return null
-    console.log('this.state.chapters', this.state.chapters)
     // console.log('active chapter is', this.state.activeChapter)
     const { activeChapter } = this.state
     console.log('active chapter is', activeChapter)
     return (
       <section>
         <div>
-          <h1>Welcome to Josh's Tale, a choose your own ending adventure built in React.</h1>
+          <h1>Welcome to the Tale of Joshua, a choose your own ending adventure built in React.</h1>
           <p>Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens certain options and closes others, shaping your journey. Choose wisely!</p>
         </div>
 

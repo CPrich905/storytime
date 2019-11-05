@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // import ChapterCard from './ChapterCard'
 
-class ChapterShow extends Component {
+class NextChapter extends Component {
   constructor() {
     super()
     this.state = {
@@ -35,7 +35,7 @@ class ChapterShow extends Component {
     chapter.options.forEach(function(i){
       // console.log(i)
       axios.get(`/api/chapters/search/${i}`)
-        .then(res => this.setState({ optionsText: res.data.choice }))
+        .then(res => this.setState({ optionsText: res.data.choice}))
         // .then(res => console.log(res.data.choice))
         // .then(console.log(this.optionsText))
         .catch(err => console.log(err))
@@ -48,8 +48,7 @@ class ChapterShow extends Component {
     // specifying the number works, ie: axios.get('/api/chapterssearch/2')
     // this
     axios.get(`/api/chapters/search/${this.state.selected}`)
-      // .then(res => console.log('res.data from set() is', res.data ))
-      .then(res => this.setState({ chapter: res.data}))
+      .then(res => console.log('res.data from set() is', res.data ))
       .catch(err => console.log(err))
   }
 
@@ -96,7 +95,7 @@ class ChapterShow extends Component {
 
 }
 
-export default ChapterShow
+export default NextChapter
 
 
 // <div>
