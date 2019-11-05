@@ -13,7 +13,7 @@ class ChapterShow extends Component {
       optionsText: null,
       selected: null }
 
-    this.checkOptions = this.checkOptions.bind(this)
+    // this.checkOptions = this.checkOptions.bind(this)
     this.selectClick = this.selectClick.bind(this)
     this.set = this.set.bind(this)
     // this.click = this.click.bind(this)
@@ -28,20 +28,20 @@ class ChapterShow extends Component {
       .catch(err => console.log(err))
   }
 
-  checkOptions() {
-    //function to check the options on the current chapter, pushing option number to an array of options in state. Choice text should be rendered with the choice number.
-    const { chapter } = this.state
-
-    chapter.options.forEach(function(i){
-      // console.log(i)
-      axios.get(`/api/chapters/search/${i}`)
-        .then(res => this.setState({ optionsText: res.data.choice }))
-        // .then(res => console.log(res.data.choice))
-        // .then(console.log(this.optionsText))
-        .catch(err => console.log(err))
-    })
-    console.log(this.state.optionsText)
-  }
+  // checkOptions() {
+  //   //function to check the options on the current chapter, pushing option number to an array of options in state. Choice text should be rendered with the choice number.
+  //   const { chapter } = this.state
+  //
+  //   chapter.options.forEach(function(i){
+  //     // console.log(i)
+  //     axios.get(`/api/chapters/search/${i}`)
+  //       .then(res => this.setState({ optionsText: res.data.choice }))
+  //       // .then(res => console.log(res.data.choice))
+  //       // .then(console.log(this.optionsText))
+  //       .catch(err => console.log(err))
+  //   })
+  //   console.log(this.state.optionsText)
+  // }
 
   set(){
     // console.log('set fires, selected is', this.state.selected)
@@ -67,7 +67,7 @@ class ChapterShow extends Component {
 
   render() {
     if(!this.state.chapter) return null
-    this.checkOptions()
+    // this.checkOptions()
     const { chapter } = this.state
     console.log('chapter', chapter)
     // console.log('optionsText is', optionsText)
