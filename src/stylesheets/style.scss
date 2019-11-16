@@ -1,0 +1,68 @@
+// COMMON STYLES
+* {
+  box-sizing: border-box;
+}
+
+$parchment: #FFFDD0;
+$header-font: 'Dancing Script', cursive;
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
+  margin-top: 5px;
+}
+
+.col-50 {
+  width: 50%;
+  float: left;
+  margin-top: 5px;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+  margin-top: 5px;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+// NAVBAR STLES
+.navbar {
+  border: 2px solid green;
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+}
+
+.navbar-brand {
+  width: 70%;
+  border: 2px solid blue;
+  float: left;
+}
+
+.navbar-menu {
+  width: 30%;
+  float: right;
+  border: 2px solid green;
+  flex-wrap: wrap;
+}
+
+// HOME STYLES
+.home-section {
+  border: 2px solid red;
+  background-color: $parchment;
+}
+
+// CHAPTER STYLES

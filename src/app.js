@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './style.scss'
+import './stylesheets/style.scss'
 // import './style.css'
 
 // Component Welcome page, explains the idea of the story & an intro to the project.
