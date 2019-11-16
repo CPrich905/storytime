@@ -42,17 +42,16 @@ class Home extends React.Component {
     if(!this.state.chapters || !this.state.activeChapter) return null
     // console.log('active chapter is', this.state.activeChapter)
     const { activeChapter } = this.state
-    console.log('active chapter is', activeChapter)
+    // console.log('active chapter is', activeChapter)
     return (
-      <section>
-        <div>
-          <h1>Welcome to the Tale of Joshua, a choose your own ending adventure built in React.</h1>
-          <p>Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens certain options and closes others, shaping your journey. Choose wisely!</p>
+      <section className="home-section">
+        <div className="home-about">
+          <p>Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens some doors and closes others, shaping your journey. Choose wisely!</p>
         </div>
 
-        <div>
+        <div className="chapter-card">
           <ChapterCard
-            key={activeChapter._id}
+            key={activeChapter.chapter}
             {...activeChapter}
           />
         </div>

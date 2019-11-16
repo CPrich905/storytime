@@ -16,6 +16,7 @@ class ChapterShow extends Component {
     // this.checkOptions = this.checkOptions.bind(this)
     this.selectClick = this.selectClick.bind(this)
     this.set = this.set.bind(this)
+    this.clicked = this.clicked.bind(this)
     // this.click = this.click.bind(this)
   }
 
@@ -24,6 +25,7 @@ class ChapterShow extends Component {
   getData() {
     // console.log('getData in ChaperShow fires')
     axios.get(`/api/chapters/${this.props.match.params.id}`)
+      // .then(res => console.log(res.data))
       .then(res => this.setState({ chapter: res.data }))
       .catch(err => console.log(err))
   }
@@ -44,7 +46,7 @@ class ChapterShow extends Component {
   // }
 
   set(){
-    // console.log('set fires, selected is', this.state.selected)
+    console.log('set selected is', this.state.selected)
     // specifying the number works, ie: axios.get('/api/chapterssearch/2')
     // this
     axios.get(`/api/chapters/search/${this.state.selected}`)
@@ -53,9 +55,13 @@ class ChapterShow extends Component {
       .catch(err => console.log(err))
   }
 
+  clicked() {
+
+  }
 
   selectClick(e) {
-    const data =  parseInt(e.target.innerText)
+    console.log('selectClick fires on', e.target)
+    const data =  parseInt(e.target.id)
     this.setState({ selected: data })
   }
 
@@ -69,24 +75,26 @@ class ChapterShow extends Component {
     if(!this.state.chapter) return null
     // this.checkOptions()
     const { chapter } = this.state
-    console.log('chapter', chapter)
+    // console.log('chapter', chapter)
     // console.log('optionsText is', optionsText)
     return (
       <main>
-        <div>
+        <div className="chapter">
           <h1>Chapter title </h1>
           <h2>Chapter {chapter.chapter}</h2>
           <p>You decided to {chapter.choice}...</p>
           <p> {chapter.text} </p>
 
-          <div>
+          <div className="options">
             {chapter.options.map((option, i) =>
               <Link
-                to={`/search/${option}`}
+                to={`/search/${option.id}`}
                 key={i}
+                id={option.id}
+                onClick={this.clicked}
                 onMouseDown={this.selectClick}
                 onMouseUp={this.set}
-              > {option} </Link>
+              > {option.option} </Link>
             )}
           </div>
         </div>
