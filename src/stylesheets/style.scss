@@ -6,13 +6,22 @@
 $parchment: #FFFDD0;
 $header-font: 'Dancing Script', cursive;
 
+// @import './hamburgers.scss',
+
 body {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .title {
-  font-family: 'Dancing Script', cursive;
+  font-family: $header-font;
+  font-weight: bolder;
+  font-size: 200%
+}
+
+.sub-title {
+  font-size: 75%;
 }
 
 .col-25 {
@@ -44,25 +53,35 @@ body {
   justify-content: center;
   text-align: center;
   display: inline-block;
+  height: 20%;
 }
 
 .navbar-brand {
-  width: 70%;
   border: 2px solid blue;
   float: left;
 }
 
 .navbar-menu {
-  width: 30%;
   float: right;
   border: 2px solid green;
   flex-wrap: wrap;
+}
+
+.navbar-link {
+  height: 33%;
 }
 
 // HOME STYLES
 .home-section {
   border: 2px solid red;
   background-color: $parchment;
+  height: 75%;
 }
 
 // CHAPTER STYLES
+
+// FOOTER STYLES
+.footer {
+  border: 2px solid black;
+  height: 10%;
+}

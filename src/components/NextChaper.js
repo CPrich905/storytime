@@ -72,7 +72,7 @@ class NextChapter extends Component {
     // console.log('optionsText is', optionsText)
     return (
       <main>
-        <div>
+        <div className="">
           <h1>Chapter title </h1>
           <h2>Chapter {chapter.chapter}</h2>
           <p>You decided to {chapter.choice}...</p>

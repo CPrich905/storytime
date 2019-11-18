@@ -22,23 +22,43 @@ class NavBar extends React.Component {
     return(
       <nav className="navbar col-100">
         <div className="container">
-          <div className="navbar-brand">
-            <h1 className="title">Joshua&apos;s Tale</h1>
-            <p>A choose your own adventure story, built in React</p>
+          <div className="navbar-brand col-75">
+            <p className="title">Joshua&apos;s Tale</p>
+            <p className="sub-title">A choose your own adventure story, built in React</p>
           </div>
-          <div className="navbar-menu">
+          <div className="navbar-menu col-25">
             <a role="button"
               className="navbar-burger"
               aria-label="menu"
               aria-expanded="false">
-              <span aria-hidden="true"><a
-                href="https://github.com/CPrich905/storytime"
-              >See the code on Github</a></span>
-              <span aria-hidden="true"><a href="/">Back to start</a></span>
-              <span aria-hidden="true">Previous Chapter</span>
+              <span
+                aria-hidden="true"
+                className="navbar-link">
+                <a
+                  href="https://github.com/CPrich905/storytime"
+                >Github</a>
+              </span>
+              <span aria-hidden="true"
+                className="navbar-link">
+                <a href="/">Back to start</a>
+              </span>
+              <span
+                aria-hidden="true"
+                className="navbar-link">
+                <a>Previous Chapter</a>
+              </span>
+
+              <button className="hamburger hamburger--collapse" type="button">
+                <span className="hamburger-box">
+                  <span className="hamburger-inner">Github</span>
+                  <span className="hamburger-inner">Start</span>
+                  <span className="hamburger-inner">Previous</span>
+                </span>
+              </button>
+
             </a>
           </div>
-        </div>
+        </div>Name
       </nav>
     )
   }
