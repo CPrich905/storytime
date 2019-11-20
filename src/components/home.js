@@ -38,11 +38,8 @@ class Home extends React.Component {
   // the below currently maps through all chapters.
   // Home page will need only chapter 1. For all subsequent chapters, the choices will need to be mapped through, probably using chapters.choices.map(chapter)
   render() {
-    console.log('home render fires')
     if(!this.state.chapters || !this.state.activeChapter) return null
-    // console.log('active chapter is', this.state.activeChapter)
     const { activeChapter } = this.state
-    // console.log('active chapter is', activeChapter)
     return (
       <section className="home-section">
         <div className="home-about">

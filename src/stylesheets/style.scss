@@ -1,12 +1,11 @@
+$parchment: FFFAF0;
+$header-font: 'Dancing Script', cursive;
+
 // COMMON STYLES
 * {
   box-sizing: border-box;
+  background-color: $parchment
 }
-
-$parchment: #FFFDD0;
-$header-font: 'Dancing Script', cursive;
-
-// @import './hamburgers.scss',
 
 body {
   display: flex;
@@ -24,64 +23,150 @@ body {
   font-size: 75%;
 }
 
-.col-25 {
-  width: 25%;
-  float: left;
-  margin-top: 5px;
-}
-
-.col-50 {
-  width: 50%;
-  float: left;
-  margin-top: 5px;
+.col-100 {
+  width: 100%;
 }
 
 .col-75 {
   width: 75%;
   float: left;
-  margin-top: 5px;
 }
 
-.col-100 {
-  width: 100%;
+.col-50 {
+  width: 50%;
+  float: left;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
 }
 
 // NAVBAR STLES
 .navbar {
   border: 2px solid green;
-  padding: 5px;
   justify-content: center;
   text-align: center;
   display: inline-block;
-  height: 20%;
+  height: 15%;
+  width: 100%;
 }
 
 .navbar-brand {
   border: 2px solid blue;
-  float: left;
+  margin: auto;
+  align-self: center;
 }
 
 .navbar-menu {
   float: right;
   border: 2px solid green;
   flex-wrap: wrap;
+  padding: 2px;
+  #navbar-icon {
+    position: fixed;
+    top: 20px;
+    right: 2px;
+  }
+  #navbar-name {
+    color: red;
+    position: relative;
+    z-index: 2;
+    top: 75px;
+    left: 5px;
+  }
 }
 
-.navbar-link {
-  height: 33%;
+//hides/shows content of hamburger menu
+.hamburger-box {
+  display: none;
+  a {
+    color: black;
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+  }
+  #close-burger{
+    color: blue;
+    text-align: left;
+    position: relative;
+  }
 }
 
 // HOME STYLES
 .home-section {
   border: 2px solid red;
   background-color: $parchment;
-  height: 75%;
+  height: 70vh;
+  padding: 5px;
+  text-align: center;
+}
+
+//common chapter styles
+.home-about, .chapter-header, .chapter-text, .chapter-options {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.chapter-card {
+  border: 2px dashed red;
+  width: 30vw;
+  margin: auto;
 }
 
 // CHAPTER STYLES
 
+.chapter {
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+.chapter-header {
+  border: 2px dashed red;
+}
+
+.chapter-text {
+  border: 2px dashed blue;
+  //the white-space declaration spaces lines on \n in seed file
+  white-space: pre-wrap;
+}
+
+.chapter-options {
+  border: 2px dashed green;
+  padding: 5px;
+  a {
+    width: 30%;
+    display: inline-block;
+  }
+}
+
 // FOOTER STYLES
 .footer {
+  text-align: center;
   border: 2px solid black;
-  height: 10%;
+  height: 10vh;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+
+// MEDIA QUERY - TABLET
+@media (min-width: 768px) {
+  // * {
+  //   background-color: black;
+  // }
+
+.navbar-menu{
+  #navbar-name {
+    color: blue;
+    position: relative;
+    top: 75px;
+    bottom: 50px;
+    right: 50px;
+    left: 55px;
+  }
+}
 }

@@ -20,7 +20,7 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <BrowserRouter>
-      <main>
+      <main className="app-main">
         <NavBar />
         <Switch>
           <Route path="/:id" component={ ChapterShow }/>

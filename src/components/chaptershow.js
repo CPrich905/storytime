@@ -35,7 +35,6 @@ class ChapterShow extends Component {
 
   // set() uses selected set above & makes axios request for chapter by chapter number.
   set(){
-    console.log('set selected is', this.state.selected)
     axios.get(`/api/chapters/search/${this.state.selected}`)
       // .then(res => console.log('res.data from set() is', res.data ))
       .then(res => this.setState({ chapter: res.data}))
@@ -50,25 +49,23 @@ class ChapterShow extends Component {
 
   render() {
     if(!this.state.chapter) return null
-    // this.checkOptions()
     const { chapter } = this.state
-    console.log('chapter render:', chapter)
-    // console.log('optionsText is', optionsText)
     return (
       <main>
         <div className="chapter">
           <div className="chapter-header">
-            <h1>?Chapter title?</h1>
             <h2>Chapter {chapter.chapter}</h2>
+            <h1>?Chapter title?</h1>
             <p>The road so far {chapter.choice}...</p>
           </div>
           <div className="chapter-text">
             <p> {chapter.text} </p>
           </div>
 
-          <div className="options">
+          <div className="chapter-options">
             {chapter.options.map((option, i) =>
               <Link
+                className="chapter-option"
                 to={`/search/${option.id}`}
                 key={i}
                 id={option.id}

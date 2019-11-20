@@ -1,0 +1,43 @@
+//https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+
+//Create burger icon (image of a book?)
+
+.hamburger {
+  color: blue;
+}
+
+.hamburger-box: {
+  border: 3px solid red;
+}
+
+.navbar-menu {
+  background-color: grey;
+}
+
+.navbar {
+  border: 2px solid green;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  height: 20%;
+}
+
+.navbar-brand {
+  border: 2px solid blue;
+  margin: auto;
+  align-self: center;
+}
+
+.navbar-menu {
+  float: right;
+  border: 2px solid green;
+  flex-wrap: wrap;
+  // width: 24%;
+}
+
+.navbar-link {
+  height: 33%;
+}
+
+
+//Style buttons in the burger (image of open book)

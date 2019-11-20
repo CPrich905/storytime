@@ -16,7 +16,6 @@ class NextChapter extends Component {
     this.checkOptions = this.checkOptions.bind(this)
     this.selectClick = this.selectClick.bind(this)
     this.set = this.set.bind(this)
-    // this.click = this.click.bind(this)
   }
 
 
@@ -40,11 +39,9 @@ class NextChapter extends Component {
         // .then(console.log(this.optionsText))
         .catch(err => console.log(err))
     })
-    console.log(this.state.optionsText)
   }
 
   set(){
-    // console.log('set fires, selected is', this.state.selected)
     // specifying the number works, ie: axios.get('/api/chapterssearch/2')
     // this
     axios.get(`/api/chapters/search/${this.state.selected}`)
@@ -68,17 +65,15 @@ class NextChapter extends Component {
     if(!this.state.chapter) return null
     this.checkOptions()
     const { chapter } = this.state
-    console.log('chapter', chapter)
-    // console.log('optionsText is', optionsText)
     return (
       <main>
-        <div className="">
+        <div className="chapter-main">
           <h1>Chapter title </h1>
           <h2>Chapter {chapter.chapter}</h2>
           <p>You decided to {chapter.choice}...</p>
           <p> {chapter.text} </p>
 
-          <div>
+          <div className="chapter-options">
             {chapter.options.map((option, i) =>
               <Link
                 to={`/search/${option}`}

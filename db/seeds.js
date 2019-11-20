@@ -11,7 +11,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
     //Chapter 1 & initial choices of travelling companions.
     { chapter: 1,
       choice: 'Begin your journey...',
-      text: 'You have a mysterious sickness. You want to go from city A to city B, where you believe there may be a cure. You are currently in an inn, and overhear a traveller talking about making the same journey. He mentions a caravan leaving for City B tomorrow, a mercenary group who will be carrying out a patrol between city A & B. He will be travelling on his own and invites you along.',
+      text: `You have a mysterious sickness. You want to go from city A to city B, where you believe there may be a cure. You are currently in an inn, and overhear a traveller talking about making the same journey. He mentions a caravan leaving for City B tomorrow, a mercenary group who will be carrying out a patrol between city A & B. He will be travelling on his own and invites you along. \n
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       options: [
         {
           option: 'Join the solo traveller',
@@ -30,7 +32,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
     // TRAVELLER ROUTE, you set off with traveller (1) and after a couple of days you are attacked & the power is released. Decisions: kill bandits & spare the traveller (5) OR kill bandits & traveller (9)
     { chapter: 2,
       choice: 'Join the solo traveller',
-      text: 'You \'re attacked by bandits. You get hurt and the power is released.',
+      text: 'You \'re attacked by bandits. You get hurt and the power is released. \n\n   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       options: [
         {
           option: 'You spared the traveller.',
@@ -45,7 +47,9 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
     // !MERCENARY ROUTE,  2 more days in City A. You have a choice to travel with them(11) or follow along the next day (14)SOLO ROUTE(clean conscience)
     { chapter: 3,
       choice: 'Join the mercenary band',
-      text: 'The mercenaries are leaving in 4 days. You have 4 more days in city A. You\'re attacked one night in an alley and protected by SOLDIER. The night before they leave, news comes in that the caravan has been attacked. The mercenaries warn you that they will be travelling fast & you might be asked to help.',
+      text: `The mercenaries are leaving in 4 days. You have 4 more days in city A. You're attacked one night in an alley and protected by SOLDIER. The night before they leave, news comes in that the caravan has been attacked. The mercenaries warn you that they will be travelling fast & you might be asked to help. \n
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       options: [
         {
           option: 'Travel with the mercenaries',
@@ -137,7 +141,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
         }
       ]
     },
-    
+
     // SOLO ROUTE(dead TRAVELLER), origins: you kill the TRAVELLER(2) & carry on alone. You are invited to perform by the local BARON. Perform (22) or make your excuses (23), either way combines with SOLO ROUTE(clean conscience)
     { chapter: 9,
       choice: 'Kill the traveller & continue alone',
