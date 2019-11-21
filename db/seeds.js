@@ -10,28 +10,63 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true },  (e
   Chapter.create([
     //Chapter 1 & initial choices of travelling companions.
     { chapter: 1,
-      choice: 'Begin your journey...',
-      text: `You have a mysterious sickness. You want to go from city A to city B, where you believe there may be a cure. You are currently in an inn, and overhear a traveller talking about making the same journey. He mentions a caravan leaving for City B tomorrow, a mercenary group who will be carrying out a patrol between city A & B. He will be travelling on his own and invites you along. \n
+      choice: 'After years of searching for answers, Joshua found a near-forgotten mention of the mages of Karhold and set off on his journey. But there are still many miles to go...',
+      text: `Joshua wrapped his cloak around him, body hunched against the rain and wind that bit cleanly through his near threadbare clothing. He staggered, cursing and stumbling in the mud that clotted the streets during the day and froze into ankle-breaking divots with the night, one foot disappearing almost to the knee in a puddle he hoped niaively was mostly water. Ahead of him a door opened, spearing light and noise from the Inn into the street, staying open for a brief moment as a patron considered braving the elements to get him before deciding better of it and retreating to the bar and the fire inside.
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      Skirting the edge of the narrow street in an attempt to avoid the worst of the mud, Joshua pushed on, finally reaching the doorway that had opened briefly earlier and checking the sign above. 'The Trader's Weights' was scrawled on a sign that had been poorly painted many years before and never touched up since, had it been a bright day and had he looked closely, Joshua may also have made out the barest hint of a sketch of a pair of scales. This was the place. He sighed, reaching for the door.
+
+      Joshua had arrived in Rangedigtun shortly before the gates had closed for the night, his face twisted against a wind chilled high in the mountains, goaded by leering grey clouds that threatened rain to soak any foolhardy enough to shun shelter. His enquiries for any travellers heading to Karhold had earned a wave towards the warren of streets that was the merchant district and the name of an inn just as the skies opened and the streets began to clear for the early-dusk the storm had bought.
+
+      The warmth and noise of the inn hit him almost as hard as the wind. Eyes watering and nose streaming, Joshua kicked the mud from his boots and stepped over the lintel, smoothing his ragged cloak as he wended his way to the bar running along the far wall. When it was newly purchased, the mages cloak would have earned him respectful glances, maybe even an invitation to perform some simple tricks and the free food and drink that came with it. He remembered the day he had received it, several years and more than one repeated exam after first entering the magician's college at Villin, the pride he had felt had long since twisted into bitterness and the once-fine cloak was a regular reminder of all that had befallen him since those heady days.
+
+      Mentally counting the coins available for food and lodging did not take long, and after a short exchange at the bar he had even fewer left in exchange for a heap of straw in the barn for the night and a mug of warmed and spiced cider to go with a bowl of bland stew. Carefully balancing bowl, mug and heel of stale bread, Joshua made his way towards a fire-place spitting it's disgust at unseasoned logs towards a small crowd that cursed when sparks found bare skin, and began to eavesdrop on the conversations.
+
+      "... tell you, the bandits are nothing to worry about, but if you're that concerned, why not wait and travel with Captain Tomas?" The speaker was an overly-fed man who had the air of one who didn't get the respect he felt he deserved most of the time and made up for it by providing unsolicited advice to any within earshot. The recipient of this nugget of wisdom was nodding in apparent agreement, though with his eyes were focused on a corner of the firegrate and giving no other outward sign of attentiveness, he could equally have been agreeing with a voice only he could hear or a fleeting thought of his own.
+
+      "Tomas?!" The name was sneered with disgust by one of the others, a scrawny man in clothing almost identical to the big man's, his fawning glance at the same marking the sneerer as one of his followers. "You mean the Sleepy Soldier? He who napped through the entire Southern campaign and yet still managed a knighting at the end? I'd rather chance the roads on my own!" The jest was met with grunts of near amusement and a benevolent smile from the big man, but no actual laughter. The jester's sallow cheeks coloured slightly and his features became more pinched as his joke died.
+
+      "Sound advice my friend, I thank you for it." The fire-gazer spoke, nodding once at the big man. "It seems I have a lot to think of before I set off for Karhold." Joshua's attention was snatched from his meagre dinner.
+
+      "Karhold? You are heading to Karhold?" The fire-gazer spared him a brief glance and nodded before turning back to the dancing flames.
+
+      "I'm afraid you have arrived a few minutes too late my new friend." The big man smiled and gave a small belch. Joshua noticed the glazed eyes and the slight slur that marked him as at the edge of drunk. "'Scuse me. I am Markus of Deepwater, purveyor and transporter of fine goods, man of, man of..." he trailed off, waving a hand for patience and excuse as he let out another belch. "Man of the world and all that. But I'm 'fraid I'm a little worse for wear than than I was, heh, you will have to speak to... to..." Markus of Deepwater waved again, this time at the fire-gazer, who's name he had forgotten if he'd ever known it. "m' friend here for the advice. Caleb!" He slammed a meaty hand down on the shoulder of the joke-teller. "Think it's time we were off, hey?"
+
+      Caleb's scowl deepened at the prospect of leaving the warmth and shelter of the inn for the wind and rain outside but none-the-less gathered his and Markus' cloaks from hooks by the fire, and the two men bundled themselves against the elements before stepping into the night. Joshua shuffled closer to the fire, grateful for the now vacant stool that let him eat in a modicum of comfort.
+
+      "If it's not too much trouble..." he began, eyes pleading across the small hearth at the man left behind. A cocked eyebrow was the only invitation to continue. "Umm. I'm trying to get to Karhold you see, it's really quite urgent. And, well..." he waved at the now closed doorway and the two men who had retreated through it. "He mentioned I should ask you for advice?"
+
+      The other man turned his gaze back to the fire, seeming to ponder Joshua's request a moment before reaching his conclusion.
+
+      "There are two choices. Maybe three, now. You can buy passage with our dear friend Markus there, he will be leaving in four days time, heading along the main road with the rest of his caravan and a small group of guards, who will almost certainly come under attack from bandits but may have enough swords to keep the caravan safe. Or you can leave next week with Captain Tomas, he's taking a patrol through to Karhold and has made it clear that any travellers willing to keep up with his pace can come with them."
+
+      Joshua thought of the options. Travelling with Markus would cost him most, if not all of the meagre coin store he had available. Travelling with the mercenaries would be faster certainly and probably safer, but could he afford to wait a week more with the end of his journey so near?
+
+      "You mentioned there might be a third option now?"
+
+      The other man turned from the fire and set Joshua with a stare that seemed to peel him layer by layer, examining each in minute detail in search of an answer to an unknown question. Whatever the stranger saw, apparently it was enough.
+
+      "I am also travelling to Karhold. The roads are too dangerous to travel alone, but two together..." He shrugged. "We'd move faster than Markus' caravan and one can watch while the other sleeps. We also stand a better chance to slip past any watchmen the bandits may have on the road. My name is Roloff, by the way. And I'm ready to leave this place tomorrow morning."
+
+      Joshua took the proferred hand and gave his name as well.`,
+      // His family had not been rich to start with and his tuition had taken them to the brink of poverty and fter his... accident, Joshua had not even gone to ask them for help. They wouldn't have been able to afford it even if they had been inclined to help after the council had so successfully laid all blame at his feet.
       options: [
         {
-          option: 'Join the solo traveller',
+          option: 'Join Roloff and set off for Karhold as soon as possible',
           id: 2
         },
         {
-          option: 'Join the mercenary band',
+          option: 'Wait for a week but have Captain Tomas and his patrol for an armed escort',
           id: 3
         },
         {
-          option: 'Join the merchant Caravan.',
+          option: 'Join Markus and his caravan and hope that his guards will keep you safe.',
           id: 4
         }
       ]
     },
     // TRAVELLER ROUTE, you set off with traveller (1) and after a couple of days you are attacked & the power is released. Decisions: kill bandits & spare the traveller (5) OR kill bandits & traveller (9)
     { chapter: 2,
-      choice: 'Join the solo traveller',
+      choice: 'You met Roloff in the Trader\'s Weights and decided to travel on to Karhold together.',
       text: 'You \'re attacked by bandits. You get hurt and the power is released. \n\n   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       options: [
         {
