@@ -42,10 +42,7 @@ class NavBar extends React.Component {
           </div>
 
           <div className="navbar-menu col-25">
-            <span
-              className="navbar-icon"
-              id="navbar-name">Menu
-            </span>
+      
             <span
               className="icon"
               id="navbar-icon"

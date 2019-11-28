@@ -44,7 +44,7 @@ body {
 
 // NAVBAR STLES
 .navbar {
-  border: 2px solid green;
+  // border: 2px solid green;
   justify-content: center;
   text-align: center;
   display: inline-block;
@@ -53,28 +53,28 @@ body {
 }
 
 .navbar-brand {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   margin: auto;
   align-self: center;
 }
 
 .navbar-menu {
   float: right;
-  border: 2px solid green;
+  // border: 2px solid green;
   flex-wrap: wrap;
   padding: 2px;
-  #navbar-icon {
-    position: fixed;
-    top: 20px;
-    right: 2px;
-  }
-  #navbar-name {
-    color: red;
-    position: relative;
-    z-index: 2;
-    top: 75px;
-    left: 5px;
-  }
+  // #navbar-icon {
+  //   position: fixed;
+  //   top: 20px;
+  //   right: 2px;
+  // }
+  // #navbar-name {
+  //   color: red;
+  //   position: relative;
+  //   z-index: 2;
+  //   top: 75px;
+  //   left: 5px;
+  // }
 }
 
 //hides/shows content of hamburger menu
@@ -88,7 +88,7 @@ body {
     width: 100%;
   }
   #close-burger{
-    color: blue;
+    // color: blue;
     text-align: left;
     position: relative;
   }
@@ -96,7 +96,7 @@ body {
 
 // HOME STYLES
 .home-section {
-  border: 2px solid red;
+  // border: 2px solid red;
   background-color: $parchment;
   height: 70vh;
   padding: 5px;
@@ -111,7 +111,7 @@ body {
 }
 
 .chapter-card {
-  border: 2px dashed red;
+  // border: 2px dashed red;
   width: 30vw;
   margin: auto;
 }
@@ -123,18 +123,14 @@ body {
   overflow: scroll;
 }
 
-.chapter-header {
-  border: 2px dashed red;
-}
-
 .chapter-text {
-  border: 2px dashed blue;
+  // border: 2px dashed blue;
   //the white-space declaration spaces lines on \n in seed file
   white-space: pre-wrap;
 }
 
 .chapter-options {
-  border: 2px dashed green;
+  // border: 2px dashed green;
   padding: 5px;
   a {
     width: 30%;
@@ -145,7 +141,7 @@ body {
 // FOOTER STYLES
 .footer {
   text-align: center;
-  border: 2px solid black;
+  // border: 2px solid black;
   height: 10vh;
   bottom: 0;
   position: fixed;
@@ -161,7 +157,7 @@ body {
 
 .navbar-menu{
   #navbar-name {
-    color: blue;
+    // color: blue;
     position: relative;
     top: 75px;
     bottom: 50px;
