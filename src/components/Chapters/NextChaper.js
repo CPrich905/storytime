@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // import ChapterCard from './ChapterCard'
 
-class ChapterShow extends Component {
+class NextChapter extends Component {
   constructor() {
     super()
     this.state = {
@@ -13,65 +13,74 @@ class ChapterShow extends Component {
       optionsText: null,
       selected: null }
 
+    this.checkOptions = this.checkOptions.bind(this)
     this.selectClick = this.selectClick.bind(this)
     this.set = this.set.bind(this)
   }
 
 
-  // getData() sets chapter data to state. Request returns full chapter data, including choices which are mapped in return().
+  // sets chapter data to state. Request returns full chapter data.
   getData() {
     // console.log('getData in ChaperShow fires')
     axios.get(`/api/chapters/${this.props.match.params.id}`)
-      // .then(res => console.log(res.data))
       .then(res => this.setState({ chapter: res.data }))
       .catch(err => console.log(err))
   }
 
-  // selectClick() takes target id from <a> tag, mapped from options on chapter schema, parses string to integer. Sets the id of selected in state.
-  selectClick(e) {
-    const data =  parseInt(e.target.id)
-    this.setState({ selected: data })
+  checkOptions() {
+    //function to check the options on the current chapter, pushing option number to an array of options in state. Choice text should be rendered with the choice number.
+    const { chapter } = this.state
+
+    chapter.options.forEach(function(i){
+      // console.log(i)
+      axios.get(`/api/chapters/search/${i}`)
+        .then(res => this.setState({ optionsText: res.data.choice}))
+        // .then(res => console.log(res.data.choice))
+        // .then(console.log(this.optionsText))
+        .catch(err => console.log(err))
+    })
   }
 
-  // set() uses selected set above & makes axios request for chapter by chapter number.
   set(){
+    // specifying the number works, ie: axios.get('/api/chapterssearch/2')
+    // this
     axios.get(`/api/chapters/search/${this.state.selected}`)
-      // .then(res => console.log('res.data from set() is', res.data ))
-      .then(res => this.setState({ chapter: res.data}))
+      .then(res => console.log('res.data from set() is', res.data ))
       .catch(err => console.log(err))
+  }
+
+
+  selectClick(e) {
+    const data =  parseInt(e.target.innerText)
+    this.setState({ selected: data })
   }
 
   componentDidMount() {
     this.getData()
   }
 
-  // to display: summary that lead to this chapter (from chapter one onwards?), title, main text. Options as buttons to display when you reach the end of the chapter.
+  // display: Decision that lead to this chapter, title, main text. Options as buttons to display when you reach the end of the chapter.
 
   render() {
     if(!this.state.chapter) return null
+    this.checkOptions()
     const { chapter } = this.state
     return (
       <main>
-        <div className="chapter">
-          <div className="chapter-header">
-            <h2>Chapter {chapter.chapter}</h2>
-            <h1>?Chapter title?</h1>
-            <p>The road so far {chapter.choice}...</p>
-          </div>
-          <div className="chapter-text">
-            <p> {chapter.text} </p>
-          </div>
+        <div className="chapter-main">
+          
+          <h2>Chapter {chapter.chapter}</h2>
+          <p>You decided to {chapter.choice}...</p>
+          <p> {chapter.text} </p>
 
           <div className="chapter-options">
             {chapter.options.map((option, i) =>
               <Link
-                className="chapter-option"
-                to={`/search/${option.id}`}
+                to={`/search/${option}`}
                 key={i}
-                id={option.id}
                 onMouseDown={this.selectClick}
                 onMouseUp={this.set}
-              > {option.option} </Link>
+              > {option} </Link>
             )}
           </div>
         </div>
@@ -81,7 +90,7 @@ class ChapterShow extends Component {
 
 }
 
-export default ChapterShow
+export default NextChapter
 
 
 // <div>

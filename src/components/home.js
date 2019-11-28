@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 // chapter/choice display card
-import ChapterCard from './ChapterCard'
+import ChapterCard from './Chapters/ChapterCard'
 
 // copy cheeses index format - create functional component
 
