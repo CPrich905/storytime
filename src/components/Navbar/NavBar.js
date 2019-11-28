@@ -1,4 +1,5 @@
 import React from 'react'
+import { slide as Menu } from 'react-burger-menu'
 // import { Link } from 'react-router-dom'
 
 // NavBar needs to have the following:
@@ -16,7 +17,8 @@ class NavBar extends React.Component {
   }
 
   //write function to hide/show burger menu on clicked.
-  navbarClicked() {
+  navbarClicked(e) {
+    e.preventDefault()
     console.log('navbar clicked')
     const burger = document.getElementById('navbar-links')
     const burgericon = document.getElementById('navbar-icon')
@@ -36,38 +38,27 @@ class NavBar extends React.Component {
     return(
       <nav className="navbar">
         <div className="container col-100">
-          <div className="navbar-brand col-75">
+          <div className="navbar-brand">
             <p className="title">Joshua&apos;s Tale</p>
             <p className="sub-title">A choose your own adventure story, built in React</p>
           </div>
 
-          <div className="navbar-menu col-25">
-      
-            <span
-              className="icon"
-              id="navbar-icon"
-              type="button"
-              onClick={this.navbarClicked}><i className="fas fa-book fa-7x"></i>
-            </span>
-
-            <span
-              id="navbar-links"
-              className="hamburger-box">
-              <a
-                href="#previous chapter"
-                className="hamburger-inner close-book"
-                id="close-burger"
-                onClick={this.navbarClicked}>x</a>
-              <a
+          <div className="navbar-menu">
+            <ul className="navbar-item-wrapper">
+              <li className="navbar-item"><a
                 href="#Github"
-                className="hamburger-inner">Github</a>
-              <a
+                className="navbar-link">Github</a></li>
+              <li className="navbar-item"><a
+                href="#LinkedIn"
+                className="navbar-link">LinkedIn</a>  </li>
+              <li className="navbar-item"> <a
                 href="#Back to start"
-                className="hamburger-inner">Start</a>
-              <a
+                className="navbar-link">Start</a></li>
+              <li className="navbar-item"><a
                 href="#previous chapter"
-                className="hamburger-inner">Previous</a>
-            </span>
+                className="navbar-link">Previous</a></li>
+            </ul>
+
           </div>
         </div>
       </nav>
@@ -76,3 +67,12 @@ class NavBar extends React.Component {
 }
 
 export default NavBar
+
+// {/* <Menu isOpen={ false }>
+//               <a id="home" className="menu-item">Home</a>
+//               <a id="about" className="menu-item">GitHub</a>
+//               <a id="contact" className="menu-item">LinkedIn</a>
+//               <a onClick={ this.navbarClicked } className="menu-item--small" href="">Settings</a>
+//             </Menu>
+//              */}
+
