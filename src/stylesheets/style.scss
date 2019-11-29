@@ -151,14 +151,11 @@ li a:hover {
 }
 
 .chapter-options {
-  border: 2px dashed green;
   position: relative;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10vh;
-  // margin: auto;
-  // margin-bottom: 0;
   a {
     max-width: 100px;
     max-height: 120px;
@@ -182,7 +179,26 @@ li a:hover {
   background-color: $background-grey;
   width: 100%;
   padding: 2px;
-  .footer-banner, .footer-text, .footer-note, p {
+  .footer-banner, .footer-text, .footer-note, p, a {
     background-color: inherit;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  h4 {
+    margin: 10px 0;
+  }
+  span {
+    background-color: inherit;
+  }
+  .footer-text {
+    display: none;
+  }
+  .footer-note {
+    margin: 0;
+  }
+  #authors-note {
+    font-size: 70%;
   }
 }
