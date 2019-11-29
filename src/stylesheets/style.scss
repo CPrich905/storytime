@@ -1,28 +1,22 @@
 // @use 'hamburger/hamburger';
 
-$parchment: FFFAF0;
+$parchment: #fcfced;
+// $parchment: yellow;
 $header-font: 'Dancing Script', cursive;
+$background-blue: #c4edf5;
+$background-grey: #deded9;
+// $background-blue: blue;
 
 // COMMON STYLES
 * {
   box-sizing: border-box;
-  background-color: $parchment
+  background-color: $parchment;
 }
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-}
-
-.title {
-  font-family: $header-font;
-  font-weight: bolder;
-  font-size: 200%
-}
-
-.sub-title {
-  font-size: 75%;
 }
 
 .col-100 {
@@ -50,24 +44,36 @@ body {
   justify-content: center;
   text-align: center;
   display: inline-block;
-  height: 15%;
   width: 100%;
+  background-color: $background-blue;
 }
 
 .navbar-brand {
-  // border: 2px dashed blue;
+  background-color: $background-blue;
   margin: auto;
   align-self: center;
-
+  z-index: 2;
 }
 
-//Navbar menu 
+.navbar-title {
+  background-color: $background-blue;
+  font-family: $header-font;
+  font-weight: bolder;
+  font-size: 200%;
+  margin-bottom: 10px;
+}
+
+.navbar-sub-title {
+  background-color: $background-blue;
+  font-size: 75%;
+}
+
+//Navbar menu
 .navbar-item-wrapper {
   // border: 2px dashed grey;
+  z-index: -1;
   list-style-type: none;
   float: right;
-  min-width: 120px;
-  width: 25%;
   position: fixed;
   top: 0;
   right: 5px;
@@ -77,6 +83,7 @@ body {
 
 li a {
   text-decoration: none;
+  // background-color: #444;
   color: black;
   display: block;
   text-align: right;
@@ -89,25 +96,34 @@ li a:hover {
 
 // HOME STYLES
 .home-section {
-  // border: 2px solid red;
   background-color: $parchment;
-  height: 70vh;
+  // height: 70vh;
   padding: 5px;
   text-align: center;
 }
 
 //common chapter styles
 .home-about, .chapter-header, .chapter-text, .chapter-options {
-  width: 70%;
   margin: auto;
+  overflow: auto;
   text-align: center;
 }
 
 .chapter-card {
-  // border: 2px dashed red;
-  width: 30vw;
+  width: 80%;
   margin: auto;
+  text-decoration: none;
+  border: 2px solid grey;
 }
+
+.chapter-link {
+  text-decoration: none;
+}
+
+.card-text, .card-header {
+  color: black;
+}
+
 
 // CHAPTER STYLES
 
@@ -117,7 +133,6 @@ li a:hover {
 }
 
 .chapter-text {
-  // border: 2px dashed blue;
   //the white-space declaration spaces lines on \n in seed file
   white-space: pre-wrap;
 }
@@ -134,113 +149,13 @@ li a:hover {
 // FOOTER STYLES
 .footer {
   text-align: center;
-  // border: 2px solid black;
-  height: 10vh;
   bottom: 0;
+  display: inline-block;
   position: fixed;
+  bottom: 0;
+  background-color: $background-grey;
   width: 100%;
+  .footer-banner, .footer-text, .footer-note, p{
+    background-color: inherit;
+  }
 }
-
-
-// MEDIA QUERY - TABLET
-// @media (min-width: 768px) {
-//   * {
-//     background-color: black;
-//   }
-
-// .navbar-menu{
-//   #navbar-name {
-//     // color: blue;
-//     position: relative;
-//     top: 75px;
-//     bottom: 50px;
-//     right: 50px;
-//     left: 55px;
-//   }
-// }
-// }
-// react-burger-menu from https://github.com/negomi/react-burger-menu
-//
-
-// .style {
-//   position: absolute;
-//   left: 0px;
-//   top: 0px;
-//   width: 50%;
-//   background-color: #a90000;
-//   height: 50%;
-//   margin: 0px;
-//   padding: 0px;
-//   border: none;
-//   font-size: 0px;
-//   background: transparent;
-//   cursor: pointer;
-// }
-
-// .bm-burger-button {
-//   position: fixed;
-//   width: 36px;
-//   height: 30px;
-//   left: 36px;
-//   top: 36px;
-// }
-
-// /* Color/shape of burger icon bars */
-// .bm-burger-bars {
-//   background: #373a47;
-// }
-
-// /* Color/shape of burger icon bars on hover*/
-// .bm-burger-bars-hover {
-//   background: #a90000;
-// }
-
-// /* Position and sizing of clickable cross button */
-// .bm-cross-button {
-//   height: 24px;
-//   width: 24px;
-// }
-
-// /* Color/shape of close button cross */
-// .bm-cross {
-//   background: #bdc3c7;
-// }
-
-// /*
-// Sidebar wrapper styles
-// Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-// */
-// .bm-menu-wrap {
-//   position: fixed;
-//   // height: 100%;
-// }
-
-// /* General sidebar styles */
-// .bm-menu {
-//   background: #373a47;
-//   padding: 2.5em 1.5em 0;
-//   font-size: 1.15em;
-// }
-
-// /* Morph shape necessary with bubble or elastic */
-// .bm-morph-shape {
-//   fill: #373a47;
-// }
-
-// /* Wrapper for item list */
-// .bm-item-list {
-//   color: #b8b7ad;
-//   padding: 0.8em;
-//   height: 10%;
-//   width: 10%;
-// }
-
-// /* Individual item */
-// .bm-item {
-//   display: inline-block;
-// }
-
-// /* Styling of overlay */
-// .bm-overlay {
-//   background: rgba(0, 0, 0, 0.3);
-// }

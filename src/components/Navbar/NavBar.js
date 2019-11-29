@@ -1,5 +1,5 @@
 import React from 'react'
-import { slide as Menu } from 'react-burger-menu'
+// import { slide as Menu } from 'react-burger-menu'
 // import { Link } from 'react-router-dom'
 
 // NavBar needs to have the following:
@@ -39,24 +39,32 @@ class NavBar extends React.Component {
       <nav className="navbar">
         <div className="container col-100">
           <div className="navbar-brand">
-            <p className="title">Joshua&apos;s Tale</p>
-            <p className="sub-title">A choose your own adventure story, built in React</p>
+            <p className="navbar-title">Joshua&apos;s Tale</p>
+            <p className="navbar-sub-title">A choose your own adventure story, built in React</p>
           </div>
 
           <div className="navbar-menu">
             <ul className="navbar-item-wrapper">
-              <li className="navbar-item"><a
-                href="#Github"
-                className="navbar-link">Github</a></li>
-              <li className="navbar-item"><a
-                href="#LinkedIn"
-                className="navbar-link">LinkedIn</a>  </li>
-              <li className="navbar-item"> <a
-                href="#Back to start"
-                className="navbar-link">Start</a></li>
-              <li className="navbar-item"><a
-                href="#previous chapter"
-                className="navbar-link">Previous</a></li>
+              <li className="navbar-item">
+                <a
+                  href=""
+                  className="navbar-link">Github</a>
+              </li>
+              <li className="navbar-item">
+                <a
+                  href=""
+                  className="navbar-link">LinkedIn</a>
+              </li>
+              <li className="navbar-item">
+                <a
+                  href=""
+                  className="navbar-link">Start</a>
+              </li>
+              <li className="navbar-item">
+                <a
+                  href=""
+                  className="navbar-link">Previous</a>
+              </li>
             </ul>
 
           </div>
@@ -75,4 +83,3 @@ export default NavBar
 //               <a onClick={ this.navbarClicked } className="menu-item--small" href="">Settings</a>
 //             </Menu>
 //              */}
-
