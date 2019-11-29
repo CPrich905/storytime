@@ -9,7 +9,6 @@ class Footer extends React.Component {
 
   hideFooter() {
     const footerNote = document.getElementById('footer-note')
-
     if (footerNote.style.display === 'none') {
       footerNote.style.display = 'block'
     } else {

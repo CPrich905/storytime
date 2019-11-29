@@ -68,7 +68,7 @@ class NextChapter extends Component {
     return (
       <main>
         <div className="chapter-main">
-          
+
           <h2>Chapter {chapter.chapter}</h2>
           <p>You decided to {chapter.choice}...</p>
           <p> {chapter.text} </p>

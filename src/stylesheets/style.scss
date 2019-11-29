@@ -1,4 +1,4 @@
-// @use 'hamburger/hamburger';
+// @use hamburger/hamburger;
 
 $parchment: #fcfced;
 // $parchment: yellow;
@@ -45,6 +45,7 @@ body {
   text-align: center;
   display: inline-block;
   width: 100%;
+  max-height: 15vh;
   background-color: $background-blue;
 }
 
@@ -97,20 +98,28 @@ li a:hover {
 // HOME STYLES
 .home-section {
   background-color: $parchment;
-  // height: 70vh;
+  max-height: 80vh;
   padding: 5px;
   text-align: center;
 }
 
 //common chapter styles
-.home-about, .chapter-header, .chapter-text, .chapter-options {
+.chapter-header{
   margin: auto;
   overflow: auto;
   text-align: center;
 }
 
+.chapter-main {
+  margin: auto;
+  overflow: auto;
+  text-align: center;
+  margin-bottom: 15vh;
+}
+
+//chapter-card is only on homepage
 .chapter-card {
-  width: 80%;
+  width: 90%;
   margin: auto;
   text-decoration: none;
   border: 2px solid grey;
@@ -127,27 +136,44 @@ li a:hover {
 
 // CHAPTER STYLES
 
-.chapter {
-  max-height: 70vh;
+.chapter-main {
+  // max-height: 70vh;
   overflow: scroll;
 }
 
 .chapter-text {
   //the white-space declaration spaces lines on \n in seed file
   white-space: pre-wrap;
+  // height: 80vh;
+  padding: 15px;
+  text-align: left;
+
 }
 
 .chapter-options {
-  // border: 2px dashed green;
+  border: 2px dashed green;
+  position: relative;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+  // margin: auto;
+  // margin-bottom: 0;
   a {
-    width: 30%;
+    max-width: 100px;
+    max-height: 120px;
+    margin: 10px;
     display: inline-block;
+    text-align: center;
+    border: 2px solid grey;
+    text-decoration: none;
+    color: black;
   }
 }
 
 // FOOTER STYLES
 .footer {
+  min-height: 5vh;
   text-align: center;
   bottom: 0;
   display: inline-block;
@@ -155,7 +181,8 @@ li a:hover {
   bottom: 0;
   background-color: $background-grey;
   width: 100%;
-  .footer-banner, .footer-text, .footer-note, p{
+  padding: 2px;
+  .footer-banner, .footer-text, .footer-note, p {
     background-color: inherit;
   }
 }

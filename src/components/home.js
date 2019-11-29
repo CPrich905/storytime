@@ -61,14 +61,4 @@ class Home extends React.Component {
   }
 }
 
-// const Home = () => (
-//   <section>
-//     <div>
-//       <h1>Home page</h1>
-//
-//       <h2>Start the story</h2>
-//     </div>
-//   </section>
-// )
-
 export default Home
