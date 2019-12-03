@@ -19,6 +19,11 @@ body {
   margin: 0 auto;
 }
 
+.app-main {
+  position: relative;
+  min-height: 100vh;
+}
+
 .col-100 {
   width: 100%;
 }
@@ -73,7 +78,7 @@ nav {
   text-align: center;
 }
 
-li a {
+.navbar li a {
   text-decoration: none;
   background-color: $background-blue;
   color: black;
@@ -83,6 +88,10 @@ li a {
 .navbar-item {
   display: inline;
   margin: auto;
+}
+
+.navbar-icon {
+  background-color: $background-blue;
 }
 
 .navbar-link {
@@ -132,7 +141,6 @@ li a {
   color: black;
 }
 
-
 // CHAPTER STYLES
 
 .chapter-main {
@@ -146,7 +154,6 @@ li a {
   // height: 80vh;
   padding: 15px;
   text-align: left;
-
 }
 
 .chapter-options {
@@ -158,6 +165,7 @@ li a {
   a {
     max-width: 100px;
     max-height: 120px;
+    overflow: auto;
     margin: 0px auto 40px;
     text-align: center;
     border: 2px solid grey;
@@ -168,11 +176,8 @@ li a {
 
 // FOOTER STYLES
 .footer {
-  // min-height: 5vh;
+  position: absolute;
   text-align: center;
-  bottom: 0;
-  display: inline-block;
-  position: fixed;
   bottom: 0;
   background-color: $background-grey;
   width: 100%;
@@ -199,6 +204,19 @@ li a {
   .authors-note {
     font-size: 70%;
   }
+  .footer-icon {
+    background-color: $background-grey;
+  }
 }
 
+
+@media (min-width: 1024px){
+  .home-about, .home-section {
+    width: 900px;
+    margin: 0 auto;
+  }
+  .footer {
+
+  }
+}
 

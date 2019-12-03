@@ -46,14 +46,14 @@ class NavBar extends React.Component {
         <section className="menu">
           <ul className="navbar-item-wrapper">
             <li className="navbar-item">
-              <a
-                href=""
-                className="navbar-link">Github</a>
+              <a href="https://www.linkedin.com/in/charles-prichard/" 
+              target="_blank"><i className="fab fa-linkedin navbar-icon"></i></a>
             </li>
             <li className="navbar-item">
               <a
-                href=""
-                className="navbar-link">LinkedIn</a>
+                href="https://github.com/CPrich905/"
+                target="_blank"
+                className="navbar-link"><i className="fab fa-github-square navbar-icon"></i></a>
             </li>
             <li className="navbar-item">
               <a

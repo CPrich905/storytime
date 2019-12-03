@@ -11,11 +11,10 @@ import ChapterShow from './components/Chapters/chaptershow'
 import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Footer/Footer'
 // import NextChapter from './components/NextChapter'
-// Component: footer w. links to github
 
 // Future development to include a choice of characters (vue version? Score panel as well.)
 
-// add a footer with links to github & writing website when set up
+// add link writing website when set up to footer
 
 const App = () => {
   return (

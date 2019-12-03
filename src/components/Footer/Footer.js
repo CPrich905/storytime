@@ -19,7 +19,7 @@ class Footer extends React.Component {
   render() {
     return(
       <footer className="footer">
-        <h4 className="footer-banner">Page & Story by Me <a href="https://www.linkedin.com/in/charles-prichard/" target="_blank"><i className="fab fa-linkedin"></i></a></h4>
+        <h4 className="footer-banner">Page & Story by Me <a href="https://www.linkedin.com/in/charles-prichard/" target="_blank"><i className="fab fa-linkedin footer-icon"></i></a></h4>
         <section 
           className="footer-note" 
           id="footer-text-box" onClick={this.hideFooter}>
