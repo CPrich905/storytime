@@ -1,0 +1,56 @@
+//
+$background-blue: #c4edf5;
+$header-font: 'Dancing Script', cursive;
+nav {
+  display: inline-block;
+  width: 100%;
+  background-color: $background-blue;
+}
+
+.navbar-brand {
+  background-color: $background-blue;
+  margin: auto;
+  text-align: center;
+}
+
+.navbar-title {
+  background-color: $background-blue;
+  font-family: $header-font;
+  font-weight: bolder;
+  font-size: 200%;
+  margin-bottom: 10px;
+}
+
+.navbar-sub-title {
+  background-color: $background-blue;
+  font-size: 75%;
+}
+
+//Navbar menu
+.navbar-item-wrapper {
+  background-color: $background-blue;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar li a {
+  text-decoration: none;
+  background-color: $background-blue;
+  color: black;
+  width: 60px;
+}
+
+.navbar-item {
+  display: inline;
+  margin: auto;
+}
+
+.navbar-icon {
+  background-color: $background-blue;
+}
+
+.navbar-link {
+  padding: 0px 5px;
+}

@@ -43,7 +43,7 @@ class Home extends React.Component {
     return (
       <section className="home-section">
         <div className="home-about">
-          <p>This story follows Joshua, a magician afflicted by some serious bad luck and possibly a curse or three. Guide his journey as he tries to find answers.
+          <p className="about-text">This story follows Joshua, a magician afflicted by some serious bad luck and possibly a curse or three. Guide his journey as he tries to find answers.
             <br />
             <br />
           Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens some doors and closes others, shaping your journey. Choose wisely!
