@@ -51,12 +51,6 @@ class NavBar extends React.Component {
             </li>
             <li className="navbar-item">
               <a
-                href="https://github.com/CPrich905/"
-                target="_blank"
-                className="navbar-link"><i className="fab fa-github-square navbar-icon"></i></a>
-            </li>
-            <li className="navbar-item">
-              <a
                 href=""
                 className="navbar-link">Start</a>
             </li>
@@ -64,6 +58,12 @@ class NavBar extends React.Component {
               <a
                 href=""
                 className="navbar-link">Previous</a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href="https://github.com/CPrich905/"
+                target="_blank"
+                className="navbar-link"><i className="fab fa-github-square navbar-icon"></i></a>
             </li>
           </ul>
         </section>
