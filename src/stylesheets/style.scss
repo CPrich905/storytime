@@ -158,8 +158,7 @@ li a {
   a {
     max-width: 100px;
     max-height: 120px;
-    margin: 10px;
-    display: inline-block;
+    margin: 0px auto 40px;
     text-align: center;
     border: 2px solid grey;
     text-decoration: none;
@@ -169,7 +168,7 @@ li a {
 
 // FOOTER STYLES
 .footer {
-  min-height: 5vh;
+  // min-height: 5vh;
   text-align: center;
   bottom: 0;
   display: inline-block;
@@ -178,7 +177,7 @@ li a {
   background-color: $background-grey;
   width: 100%;
   padding: 2px;
-  .footer-banner, .footer-text, .footer-note, p, a {
+  .footer-banner, .footer-note, p, a {
     background-color: inherit;
   }
   a {
@@ -191,13 +190,15 @@ li a {
   span {
     background-color: inherit;
   }
-  .footer-text {
-    display: none;
-  }
   .footer-note {
     margin: 0;
   }
-  #authors-note {
+  #footer-text {
+    display: block;
+  }
+  .authors-note {
     font-size: 70%;
   }
 }
+
+
