@@ -23,7 +23,7 @@ body {
 }
 
 .app-main {
-  position: relative;
+  position: absolute;
   min-height: 100vh;
 }
 
@@ -54,17 +54,24 @@ body {
   text-align: center;
 }
 
-
-
-
-
 @media (min-width: 1024px){
+  .home-section{
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    width: 80%;
+  }
   .home-about {
     width: 900px;
-    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    width: 80%;
   }
-  .about-text {
-    width: 900px;
+  .about-text p {
+    padding: 10px;
     margin: 0 auto;
   }
 }

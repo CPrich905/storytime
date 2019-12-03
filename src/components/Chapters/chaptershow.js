@@ -51,7 +51,7 @@ class ChapterShow extends Component {
     if(!this.state.chapter) return null
     const { chapter } = this.state
     return (
-      <main>
+      <div>
         <div className="chapter">
           <div className="chapter-header">
             <h2>Chapter {chapter.chapter}</h2>
@@ -74,7 +74,7 @@ class ChapterShow extends Component {
             )}
           </div>
         </div>
-      </main>
+      </div>
     )
   }
 

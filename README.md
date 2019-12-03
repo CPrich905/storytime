@@ -27,3 +27,7 @@ I initially had the choices for each chapter as an array of chapter id/numbers -
 I changed the schema to have each choice as a key/value pair with the chapter number as the id and the choice text (to be displayed on the previous chapter as 'choice text' at the bottom of each chapter). When the user makes a choice for the story arc, the NextChapter sparks a new API request based on the next chapter number and renders the new information, including a new array of choice texts.
 
 This meant I was making a single API request per chapter, rather than multiple requests. It had the added advantage of meaning I could more easily display the choice text and made including a summary of the previous choice on each chapter much simpler.
+
+
+### Importing style sheets
+After some initial problems importing stylesheets (possibly a typo, possibly something else) I was able to rectify the issue and subsequently separate out the key components that needed styling. I feel this significantly improves readability for the styling component of this app.

@@ -17,7 +17,9 @@ $header-font: 'Dancing Script', cursive;
 //chapter-card is only on homepage
 .chapter-card {
   width: 90%;
+  min-height: 40%;
   margin: auto;
+  justify-content: center;
   text-decoration: none;
   border: 2px solid grey;
 }
@@ -32,15 +34,18 @@ $header-font: 'Dancing Script', cursive;
 
 // CHAPTER STYLES
 
-.chapter-main {
+.chapter {
   // max-height: 70vh;
-  overflow: scroll;
+  // overflow: scroll;
+  bottom: 180px;
+}
+.chapter {
+  bottom: 20px
 }
 
 .chapter-text {
   //the white-space declaration spaces lines on \n in seed file
   white-space: pre-wrap;
-  // height: 80vh;
   padding: 15px;
   text-align: left;
 }
@@ -49,13 +54,15 @@ $header-font: 'Dancing Script', cursive;
   position: relative;
   padding: 5px;
   display: flex;
+  margin: auto;
   justify-content: space-between;
-  margin-bottom: 10vh;
   a {
-    max-width: 100px;
+    min-width: 100px;
+    max-width: 300px;
+    flex-grow: 1;
     max-height: 120px;
     overflow: auto;
-    margin: 0px auto 40px;
+    margin: 0px auto;
     text-align: center;
     border: 2px solid grey;
     text-decoration: none;

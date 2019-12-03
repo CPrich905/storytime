@@ -1,9 +1,9 @@
 $background-grey: #deded9;
 
 .footer {
-  position: absolute;
-  text-align: center;
+  position: relative;
   bottom: 0;
+  text-align: center;
   background-color: $background-grey;
   width: 100%;
   padding: 2px;
@@ -31,5 +31,13 @@ $background-grey: #deded9;
   }
   .footer-icon {
     background-color: $background-grey;
+  }
+}
+
+@media (min-width: 1024px){
+  .footer-note p{
+    padding: 15px;
+    margin: auto;
+    width: 900px;
   }
 }
