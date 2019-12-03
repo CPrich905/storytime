@@ -15,6 +15,9 @@ run `mongod`
 ## About
 This passion project was inspired by a friends character sheet for a game of D&D. The idea behind the app is to make a simple choose your own ending story - each chapter has an array of choices which feed the user down a particular story arc.
 
+## NOTE:
+It was originally my intention to use Vue.js for this app, however wanted to build it out first in React. Now I have the core functionality working in React, I will begin re-building in Vue. See my github repository for progress.
+
 ## Approach
 I began by building a small seeds file of 10 chapters and building a front end to display each chapter. Once the home page and first chapter were displaying correctly, I introduced the logic to handle the reader's choices.
 Further additions were the navbar and footer, with links to social media and the home page.
