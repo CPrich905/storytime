@@ -1,4 +1,4 @@
-// @use hamburger/hamburger;
+// @use 'hamburger/hamburger';
 
 $parchment: #fcfced;
 // $parchment: yellow;
@@ -38,22 +38,17 @@ body {
   float: left;
 }
 
-// NAVBAR STLES
-.navbar {
-  // border: 2px solid green;
-  justify-content: center;
-  text-align: center;
+// NAVBAR STYLES
+nav {
   display: inline-block;
   width: 100%;
-  max-height: 15vh;
   background-color: $background-blue;
 }
 
 .navbar-brand {
   background-color: $background-blue;
   margin: auto;
-  align-self: center;
-  z-index: 2;
+  text-align: center;
 }
 
 .navbar-title {
@@ -71,29 +66,33 @@ body {
 
 //Navbar menu
 .navbar-item-wrapper {
-  // border: 2px dashed grey;
-  z-index: -1;
+  background-color: $background-blue;
   list-style-type: none;
-  float: right;
-  position: fixed;
-  top: 0;
-  right: 5px;
-  overflow: auto;
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 li a {
   text-decoration: none;
-  // background-color: #444;
+  background-color: $background-blue;
   color: black;
-  display: block;
-  text-align: right;
+  width: 60px;
 }
 
-li a:hover {
-  background-color: #555;
-  color: white;
+.navbar-item {
+  display: inline;
+  margin: auto;
 }
+
+.navbar-link {
+  padding: 0px 5px;
+}
+
+// li a:hover {
+//   background-color: #555;
+//   color: white;
+// }
 
 // HOME STYLES
 .home-section {

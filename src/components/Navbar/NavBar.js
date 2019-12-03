@@ -37,38 +37,36 @@ class NavBar extends React.Component {
   render() {
     return(
       <nav className="navbar">
-        <div className="container col-100">
-          <div className="navbar-brand">
-            <p className="navbar-title">Joshua&apos;s Tale</p>
-            <p className="navbar-sub-title">A choose your own adventure story, built in React</p>
-          </div>
 
-          <div className="navbar-menu">
-            <ul className="navbar-item-wrapper">
-              <li className="navbar-item">
-                <a
-                  href=""
-                  className="navbar-link">Github</a>
-              </li>
-              <li className="navbar-item">
-                <a
-                  href=""
-                  className="navbar-link">LinkedIn</a>
-              </li>
-              <li className="navbar-item">
-                <a
-                  href=""
-                  className="navbar-link">Start</a>
-              </li>
-              <li className="navbar-item">
-                <a
-                  href=""
-                  className="navbar-link">Previous</a>
-              </li>
-            </ul>
+        <section className="navbar-brand">
+          <p className="navbar-title">Joshua&apos;s Tale</p>
+          <p className="navbar-sub-title">A choose your own adventure story, built in React</p>
+        </section>
 
-          </div>
-        </div>
+        <section className="menu">
+          <ul className="navbar-item-wrapper">
+            <li className="navbar-item">
+              <a
+                href=""
+                className="navbar-link">Github</a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href=""
+                className="navbar-link">LinkedIn</a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href=""
+                className="navbar-link">Start</a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href=""
+                className="navbar-link">Previous</a>
+            </li>
+          </ul>
+        </section>
       </nav>
     )
   }
