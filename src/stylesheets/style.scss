@@ -25,6 +25,7 @@ body {
 .app-main {
   position: absolute;
   min-height: 100vh;
+  min-width: -webkit-fill-available;
 }
 
 .col-100 {
@@ -46,6 +47,10 @@ body {
   float: left;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
 // HOME STYLES
 .home-section {

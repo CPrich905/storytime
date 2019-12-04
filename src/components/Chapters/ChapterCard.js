@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom'
 
 
 // If adding this back in, remove { Component } and axios from imports
-const ChapterCard = ({ chapter, choice, _id }) => {
+const ChapterCard = ({ chapter, choice }) => {
   return (
     <div>
-      <Link to={`/${_id}`}
+      <Link to={`/search/${chapter}`}
         className="chapter-link">
         <div className="card">
           <div className="card-header">
