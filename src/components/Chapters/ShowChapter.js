@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // import ChapterCard from './ChapterCard'
 
-class ChapterShow extends Component {
+class ShowChapter extends Component {
   constructor() {
     super()
     this.state = {
@@ -80,7 +80,7 @@ class ChapterShow extends Component {
 
 }
 
-export default ChapterShow
+export default ShowChapter
 
 
 // <div>
