@@ -22,8 +22,8 @@ const App = () => {
       <main className="app-main">
         <NavBar />
         <Switch>
-          <Route path="/:id" component={ ShowChapter }/>
-          <Route path="/search/:query" component={ ShowChapter }/>
+          <Route path="/:id" component={ ChapterShow }/>
+          <Route path="/search/:query" component={ ChapterShow }/>
           <Route exact path="/" component={ Homepage }/>
         </Switch>
         <Footer />
