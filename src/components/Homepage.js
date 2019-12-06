@@ -2,11 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-// Comment added to force change.
-// chapter/choice display card
-// import ChapterCard from './Chapters/ChapterCard'
-
-class Home extends React.Component {
+class Homepage extends React.Component {
   constructor() {
     super()
 
@@ -53,4 +49,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+export default Homepage

@@ -5,7 +5,7 @@ import './stylesheets/style.scss'
 // import './style.css'
 
 // Component Welcome page, explains the idea of the story & an intro to the project.
-import Home from './components/Homepage'
+import Homepage from './components/Homepage'
 // ChapterShow: This needs  to show title (?and summary of previous chapter?), content, and choices.
 import ChapterShow from './components/Chapters/ShowChapter'
 import NavBar from './components/Navbar/NavBar'
@@ -24,7 +24,7 @@ const App = () => {
         <Switch>
           <Route path="/:id" component={ ChapterShow }/>
           <Route path="/search/:query" component={ ChapterShow }/>
-          <Route exact path="/" component={ Home }/>
+          <Route exact path="/" component={ Homepage }/>
         </Switch>
         <Footer />
       </main>
