@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 // chapter/choice display card
-import ChapterCard from './Chapters/ChapterCard'
+// import ChapterCard from './Chapters/ChapterCard'
 
 class Home extends React.Component {
   constructor() {

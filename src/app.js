@@ -7,7 +7,7 @@ import './stylesheets/style.scss'
 // Component Welcome page, explains the idea of the story & an intro to the project.
 import Home from './components/Home'
 // ChapterShow: This needs  to show title (?and summary of previous chapter?), content, and choices.
-import ChapterShow from './components/Chapters/chaptershow'
+import ChapterShow from './components/Chapters/ChapterShow'
 import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Footer/Footer'
 // import NextChapter from './components/NextChapter'
