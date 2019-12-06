@@ -1,56 +1,101 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-// Comment added to force change.
-// chapter/choice display card
-// import ChapterCard from './Chapters/ChapterCard'
+// import ChapterCard from './ChapterCard'
 
-class Home extends React.Component {
+class ChapterShow extends Component {
   constructor() {
     super()
+    this.state = {
+      chapter: null,
+      chapterOptions: [],
+      optionsText: null,
+      selected: null }
 
-    this.state = { chapter: null }
-    // this.checkChapter = this.checkChapter.bind(this)
+    this.selectClick = this.selectClick.bind(this)
+    this.set = this.set.bind(this)
   }
 
 
-  // get request to api/chapters/search/1 looks for a chapter with the chapter #1 & sets state. This function initially requested all chapters, sorted & saved to state but then never used the additional data.
-  componentDidMount() {
-    axios.get('/api/chapters/search/1')
-      .then(res => {
-        this.setState({ chapter: res.data })
-        // this.checkChapter()
-      })
+  // getData() sets chapter data to state. Request returns full chapter data, including choices which are mapped in return().
+  getData() {
+    // console.log('getData in ChaperShow fires')
+    axios.get(`/api/chapters/${this.props.match.params.id}`)
+      // .then(res => console.log(res.data))
+      .then(res => this.setState({ chapter: res.data }))
       .catch(err => console.log(err))
   }
 
-  // Home page will need only chapter 1. For all subsequent chapters, the choices will need to be mapped through, probably using chapters.choices.map(chapter)
-  render() {
-    if(!this.state.chapter ) return null
-    const { chapter } = this.state
-    console.log('chapter is', chapter)
-    return (
-      <section className="home-section">
-        <div className="home-about">
-          <p className="about-text">This story follows Joshua, a magician afflicted by some serious bad luck and possibly a curse or three. Guide his journey as he tries to find answers.
-            <br />
-            <br />
-          Click on the card below to start your adventure. At the bottom of each chapter, further options will become available - each choice opens some doors and closes others, shaping your journey. Choose wisely!
-          </p>
-        </div>
+  // selectClick() takes target id from <a> tag, mapped from options on chapter schema, parses string to integer. Sets the id of selected in state.
+  selectClick(e) {
+    const data =  parseInt(e.target.id)
+    this.setState({ selected: data })
+  }
 
-        <div className="chapter-card">
-          <Link
-            className="chapter-options"
-            to={`/${chapter._id}`}
-            id={chapter._id}
-            key={chapter.chapter}
-          >{chapter.choice}</Link>
+  // set() uses selected set above & makes axios request for chapter by chapter number.
+  set(){
+    axios.get(`/api/chapters/search/${this.state.selected}`)
+      // .then(res => console.log('res.data from set() is', res.data ))
+      .then(res => this.setState({ chapter: res.data}))
+      .catch(err => console.log(err))
+  }
+
+  componentDidMount() {
+    this.getData()
+  }
+
+  // to display: summary that lead to this chapter (from chapter one onwards?), title, main text. Options as buttons to display when you reach the end of the chapter.
+
+  render() {
+    if(!this.state.chapter) return null
+    const { chapter } = this.state
+    return (
+      <div>
+        <div className="chapter">
+          <div className="chapter-header">
+            <h2>Chapter {chapter.chapter}</h2>
+            <p>The road so far: {chapter.choice}...</p>
+          </div>
+          <div className="chapter-text">
+            <p> {chapter.text} </p>
+          </div>
+
+          <div className="chapter-options">
+            {chapter.options.map((option, i) =>
+              <Link
+                className="chapter-option"
+                to={`/search/${option.id}`}
+                key={i}
+                id={option.id}
+                onMouseDown={this.selectClick}
+                onMouseUp={this.set}
+              > {option.option} </Link>
+            )}
+          </div>
         </div>
-      </section>
+      </div>
     )
   }
+
 }
 
-export default Home
+export default ChapterShow
+
+
+// <div>
+//   {optionsText.map((option, i) =>
+//     <p key={i}>{option}</p>)}
+//
+// </div>
+
+
+
+// <div>
+//   {chapter.options.map((option) =>
+//     <ChapterCard
+//       key={option}
+//       el={option}
+//     />
+//   )}
+// </div>
