@@ -10,7 +10,6 @@ import Homepage from './components/Homepage'
 import ShowChapter from './components/Chapters/ShowChapter'
 import NavBar from './components/Navbar/NavBar'
 import Footer from './components/Footer/Footer'
-// import NextChapter from './components/NextChapter'
 
 // Future development to include a choice of characters (vue version? Score panel as well.)
 
