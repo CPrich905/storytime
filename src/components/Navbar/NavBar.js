@@ -51,7 +51,7 @@ class NavBar extends React.Component {
             </li>
             <li className="navbar-item">
               <a
-                href=""
+                href="/"
                 className="navbar-link">Start</a>
             </li>
             <li className="navbar-item">

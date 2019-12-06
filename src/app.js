@@ -22,14 +22,12 @@ const App = () => {
       <main className="app-main">
         <NavBar />
         <Switch>
+          <Route exact path="/" component={ Homepage }/>
           <Route path="/:id" component={ ChapterShow }/>
           <Route path="/search/:query" component={ ChapterShow }/>
-          <Route exact path="/" component={ Homepage }/>
         </Switch>
         <Footer />
       </main>
-
-
     </BrowserRouter>
   )
 }
