@@ -21,6 +21,7 @@ const App = () => {
     <BrowserRouter>
       <main className="app-main">
         <NavBar />
+        <Homepage />
         <Switch>
           <Route exact path="/" component={ Homepage }/>
           <Route path="/:id" component={ ChapterShow }/>
