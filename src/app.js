@@ -24,7 +24,7 @@ const App = () => {
         <Switch>
           <Route path="/:id" component={ ChapterShow }/>
           <Route path="/search/:query" component={ ChapterShow }/>
-          <Route exact path="/" component={ Homepage }/>
+          <Route exact path="/" component={ Home }/>
         </Switch>
         <Footer />
       </main>
