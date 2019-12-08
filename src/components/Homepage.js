@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+// import errorHandler from '../../lib/errorHandler'
 
 class Homepage extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class Homepage extends React.Component {
 
   // Home page will need only chapter 1. For all subsequent chapters, the choices will need to be mapped through, probably using chapters.choices.map(chapter)
   render() {
+    console.log('homepage renders')
     if(!this.state.chapter ) return null
     const { chapter } = this.state
     return (

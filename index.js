@@ -5,7 +5,6 @@ const app = express()
 const logger = require('./lib/logger')
 const errorHandler = require('./lib/errorHandler')
 const router = require('./config/router')
-
 const { port, dbURI } = require('./config/environment')
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
