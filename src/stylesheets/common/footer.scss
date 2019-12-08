@@ -1,10 +1,11 @@
 $background-grey: #deded9;
+$parchment: #fcfced;
 
 .footer {
   // position: relative;
   bottom: 0;
   text-align: center;
-  background-color: $background-grey;
+  background-color: $parchment;
   width: 100%;
   padding: 2px;
   .footer-banner, .footer-note, p, a {
@@ -30,7 +31,7 @@ $background-grey: #deded9;
     font-size: 70%;
   }
   .footer-icon {
-    background-color: $background-grey;
+    background-color: $parchment;
   }
 }
 
