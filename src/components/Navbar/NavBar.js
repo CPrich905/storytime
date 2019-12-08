@@ -10,32 +10,32 @@ import React from 'react'
 class NavBar extends React.Component {
   constructor() {
     super()
-
+    
     this.state = {  }
-
+    
     this.navbarClicked = this.navbarClicked.bind(this)
   }
 
+  
   //write function to hide/show burger menu on clicked.
-  navbarClicked(e) {
-    e.preventDefault()
-    console.log('navbar clicked')
-    const burger = document.getElementById('navbar-links')
-    const burgericon = document.getElementById('navbar-icon')
-    const menu = document.getElementById('navbar-menu')
-    if (burger.style.display === 'block') {
-      burger.style.display = 'none'
-      burgericon.style.display = 'block'
-      menu.stle.display = 'block'
-    } else {
-      burger.style.display = 'block'
-      burgericon.style.display = 'none'
-      menu.style.display = 'none'
-    }
-  }
+  // navbarClicked(e) {
+  //   e.preventDefault()
+  //   console.log('navbar clicked')
+  //   const burger = document.getElementById('navbar-links')
+  //   const burgericon = document.getElementById('navbar-icon')
+  //   const menu = document.getElementById('navbar-menu')
+  //   if (burger.style.display === 'block') {
+  //     burger.style.display = 'none'
+  //     burgericon.style.display = 'block'
+  //     menu.stle.display = 'block'
+  //   } else {
+  //     burger.style.display = 'block'
+  //     burgericon.style.display = 'none'
+  //     menu.style.display = 'none'
+  //   }
+  // }
 
   render() {
-    consol.log('navbar fires')
     return(
       <nav className="navbar">
 

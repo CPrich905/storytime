@@ -13,6 +13,7 @@ class Homepage extends React.Component {
 
   // get request to api/chapters/search/1 looks for a chapter with the chapter #1 & sets state. This function initially requested all chapters, sorted & saved to state but then never used the additional data.
   componentDidMount() {
+    console.log('homepage did mount')
     axios.get('/api/chapters/search/1')
       .then(res => {
         this.setState({ chapter: res.data })
@@ -25,7 +26,6 @@ class Homepage extends React.Component {
   render() {
     if(!this.state.chapter ) return null
     const { chapter } = this.state
-    console.log('homepage fires')
     return (
       <section className="home-section">
         <div className="home-about">
