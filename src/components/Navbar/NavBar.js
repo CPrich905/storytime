@@ -35,6 +35,7 @@ class NavBar extends React.Component {
   }
 
   render() {
+    consol.log('navbar fires')
     return(
       <nav className="navbar">
 

@@ -25,7 +25,7 @@ class Homepage extends React.Component {
   render() {
     if(!this.state.chapter ) return null
     const { chapter } = this.state
-    console.log('chapter is', chapter)
+    console.log('homepage fires')
     return (
       <section className="home-section">
         <div className="home-about">

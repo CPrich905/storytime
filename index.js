@@ -8,7 +8,7 @@ const router = require('./config/router')
 
 const { port, dbURI } = require('./config/environment')
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
 
 app.use(express.static(`${__dirname}/dist`))
 
