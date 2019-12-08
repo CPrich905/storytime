@@ -13,7 +13,7 @@ class NavBar extends React.Component {
     
     this.state = {  }
     
-    this.navbarClicked = this.navbarClicked.bind(this)
+    // this.navbarClicked = this.navbarClicked.bind(this)
   }
 
   
